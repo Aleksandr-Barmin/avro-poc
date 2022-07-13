@@ -1,0 +1,19 @@
+{
+    "namespace": "dev.abarmin.poc.avro.model",
+    "name": "Applicant",
+    "type": "record",
+    "fields": [
+        {
+            "name": "applicantId",
+            "type": "string"
+        },
+        {
+            "name": "person",
+            "type": "Person"
+        },
+        {
+            "name": "contactPoint",
+            "type": "ContactPoint"
+        }
+    ]
+}

@@ -53,8 +53,11 @@
                         <phase>generate-sources</phase>
                         <configuration>
                             <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
-                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+<!--                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>-->
                             <imports>
+                                <import>${project.basedir}/src/main/avro/onboarding/party-data/v1/person-name.avsc</import>
+                                <import>${project.basedir}/src/main/avro/onboarding/party-data/v1/person.avsc</import>
+                                <import>${project.basedir}/src/main/avro/onboarding/party-data/v1/postal-address.avsc</import>
                                 <import>${project.basedir}/src/main/avro/onboarding/party-data/v1/contact-point.avsc</import>
                             </imports>
                         </configuration>

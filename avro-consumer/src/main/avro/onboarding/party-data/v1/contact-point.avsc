@@ -1,0 +1,11 @@
+{
+    "namespace": "dev.abarmin.poc.avro.model",
+    "name": "ContactPoint",
+    "type": "record",
+    "fields": [
+        {
+            "name": "postalAddress",
+            "type": "PostalAddress"
+        }
+    ]
+}

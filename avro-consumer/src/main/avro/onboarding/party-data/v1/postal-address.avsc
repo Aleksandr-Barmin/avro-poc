@@ -1,0 +1,15 @@
+{
+    "namespace": "dev.abarmin.poc.avro.model",
+    "name": "PostalAddress",
+    "type": "record",
+    "fields": [
+        {
+            "name": "addressId",
+            "type": "string"
+        },
+        {
+            "name": "addressTypeCode",
+            "type": "string"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "namespace": "dev.abarmin.poc.avro.model",
+    "name": "Person",
+    "type": "record",
+    "fields": [
+        {
+            "name": "personId",
+            "type": "string"
+        },
+        {
+            "name": "personName",
+            "type": "PersonName"
+        }
+    ]
+}
