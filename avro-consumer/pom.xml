@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>dev.abarmin.poc.avro</groupId>
+        <artifactId>avro-poc</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>avro-consumer</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>11</maven.compiler.release>
+    </properties>
+
+    <developers>
+        <developer>
+            <name>Aleksandr Barmin</name>
+            <email>abarmin@outlook.com</email>
+            <url>https://github.com/aabarmin</url>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>dev.abarmin.poc.avro</groupId>
+            <artifactId>avro-schema</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.11.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.avro</groupId>
+                <artifactId>avro-maven-plugin</artifactId>
+                <version>1.11.0</version>
+                <executions>
+                    <execution>
+                        <id>generate-dto-from-avro</id>
+                        <goals>
+                            <goal>schema</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
+                            <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+                            <imports>
+                                <import>${project.basedir}/src/main/avro/onboarding/party-data/v1/contact-point.avsc</import>
+                            </imports>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

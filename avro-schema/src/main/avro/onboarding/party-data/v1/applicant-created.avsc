@@ -1,0 +1,11 @@
+{
+  "name": "ApplicantCreatedEventV1",
+  "namespace": "dev.abarmin.poc.avro.model",
+  "type": "record",
+  "fields": [
+    {
+      "name": "contactPoint",
+      "type": "dev.abarmin.poc.avro.model.ContactPoint"
+    }
+  ]
+}

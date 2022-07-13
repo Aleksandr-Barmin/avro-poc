@@ -1,0 +1,11 @@
+{
+  "namespace": "dev.abarmin.poc.avro.model",
+  "type": "record",
+  "name": "User",
+  "fields": [
+    {
+      "name": "firstName",
+      "type": "string"
+    }
+  ]
+}
